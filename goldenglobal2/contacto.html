@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Golden Global Entertainment</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+ <!--codigo de eyes_dea -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h2 {
+      color: gold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: gold;
+    }
+
+    .section {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .intro {
+      background: black;
+      color: gold;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeOut 2s ease 3s forwards;
+    }
+
+    .logo {
+      font-size: 3rem;
+      animation: popIn 1.5s ease-in-out;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    a {
+      color: gold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+    .proyecto {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 30px 0;
+  color: white;
+}
+
+.img-proyecto {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ffd70066;
+}
+
+.contenido-proyecto {
+  max-width: 600px;
+}
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.proyecto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #ffd70033;
+}
+
+.img-proyecto {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ffd70066;
+}
+
+.contenido-proyecto {
+  color: white;
+  max-width: 100%;
+}
+
+@keyframes aparecer {
+  0% { opacity: 0; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+
+@keyframes girar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#intro {
+  animation: desaparecerTodo 6s ease-in-out forwards;
+}
+
+@keyframes desaparecerTodo {
+  0%, 80% { opacity: 1; }
+  100% { opacity: 0; display: none; }
+}
+.caja-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  padding: 20px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+/* Opcional: centra el título dentro de la caja */
+.caja-texto h3 {
+  text-align: center;
+}
+
+/* Opcional: para que todas las cajas tengan el mismo alto */
+.caja-texto {
+  height: 100%;
+}
+.caja-texto {
+  padding: 20px;
+  background-color: #111;
+  border-radius: 12px;
+  color: #fff;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+  max-width: 320px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.caja-texto h3 {
+  color: #FFD700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.caja-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+     /* Contenedor del mapa */
+    .map-container {
+        
+        top: 100px;
+        left: 50%;
+        transform: translateX(+20%);
+        width: 70%;
+        height: 100%;
+        border: 3px solid gold;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 0 20px gold;
+    }
+</style>
+
+  </style>
+</head>
+<body>
+     <!-- Fondo animado -->
+  <div id="particles-js"></div>
+
+
+
+  <!-- Encabezado y menú -->
+  <header>
+    <h2>Golden Global</h2>
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección Inicio -->
+  <section id="inicio" class="section">
+   <h1>Explora el mundo de Golden Global</h1>
+   <div style="text-align: center; margin-top: 30px;">
+  <img src="golden global .jpg" alt="Golden Global Logo" style="max-width: 200px;">
+</div>
+ <section id="contacto" class="section" style="text-align: center; padding: 60px 20px; background-color: #111; color: white;">
+  <h2 style="color: #FFD700; font-size: 36px;">Contáctanos</h2>
+  
+  <p style="font-size: 18px; max-width: 600px; margin: 20px auto;">
+    ¿Tienes una idea, quieres colaborar o simplemente decir hola?  
+    <br>
+    Golden Global siempre está buscando nuevas voces, nuevas mentes y nuevas conexiones.  
+    <br>
+    Escríbenos o síguenos para formar parte del movimiento. 👊🔥
+  </p>
+<section style="background-color:#0e0e0e; padding:40px; color:white; text-align:center;">
+  <h2 style="color:gold; font-size:2rem; margin-bottom:15px;">¿Listo para ser parte del movimiento? 🔥</h2>
+  <p style="max-width:700px; margin:auto; font-size:1.1rem; line-height:1.6;">
+    ¡Hey! 👋 <br>
+    En <strong style="color:gold;">Golden Global</strong> no solo hacemos música, creamos conexiones. 
+    Y queremos que seas parte activa de este viaje.  
+    Escríbenos, cuéntanos tu historia, tus ideas o simplemente salúdanos.  
+    <br><br>
+    <span style="color:gold; font-weight:bold;">Tu voz también es parte del ritmo 🎧✨</span>
+  </p>
+
+  <!-- Formulario -->
+  <form action="https://formspree.io/f/xbladdpb" method="POST" style="max-width:600px; margin:40px auto 0; text-align:left;">
+    <label for="nombre" style="color:gold; font-size:1rem;">Tu nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" required 
+      style="width:100%; padding:10px; margin:10px 0 20px; background-color:#1a1a1a; border:1px solid gold; color:white; border-radius:6px;"><br>
+
+    <label for="correo" style="color:gold; font-size:1rem;">Tu correo:</label><br>
+    <input type="email" id="correo" name="correo" required 
+      style="width:100%; padding:10px; margin:10px 0 20px; background-color:#1a1a1a; border:1px solid gold; color:white; border-radius:6px;"><br>
+
+    <label for="mensaje" style="color:gold; font-size:1rem;">Tu mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" rows="4" required 
+      style="width:100%; padding:10px; margin:10px 0 20px; background-color:#1a1a1a; border:1px solid gold; color:white; border-radius:6px;"></textarea><br>
+
+    <button type="submit" 
+      style="background-color:gold; color:black; padding:12px 25px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; font-size:1rem;">
+      Enviar 🚀
+    </button>
+  </form>
+</section>
+
+<!-- Título -->
+  <h2 style="color: #FFD700; font-size: 36px;">Ubicación - Golden Global </h2>
+  <h2style="color: black; font-size: 36px;">.</h2>
+<!-- Mapa -->
+<div class="map-container">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.441253859632!2d-99.1764509!3d19.4329556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8c2d5024ec5%3A0x4e9b0c9874a2b302!2sLeibnitz%2012%2C%20Anzures%2C%20Miguel%20Hidalgo%2C%2011590%20Ciudad%20de%20México%2C%20CDMX!5e0!3m2!1ses!2smx!4v1691440000000!5m2!1ses!2smx" 
+        allowfullscreen="" 
+        loading="lazy">
+      
+    </iframe>
+</div>
+  </div>
+</section>
+<!-- las esas weas para poner el wasa y el facebook xd -->
+  <section id="contacto" class="section">
+  <h2>Contáctanos</h2>
+  <p>Síguenos y forma parte de la comunidad Golden Global:</p>
+
+  <div class="social-links" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 20px;">
+    <a href="https://www.instagram.com/golden_global_entertainment?igsh=OWRybGFwbWd1dno4" target="_blank" class="instagram" style="color: #fff; text-decoration: none; padding: 10px 20px; background-color: #E1306C; border-radius: 8px;">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://www.facebook.com/share/1Am4zJM5T6/" target="_blank" class="facebook" style="color: #fff; text-decoration: none; padding: 10px 20px; background-color: #1877F2; border-radius: 8px;">
+      <i class="fab fa-facebook-f"></i> Facebook
+    </a>
+    <a href="https://www.tiktok.com/@golden_global_e?is_from_webapp=1&sender_device=pc" target="_blank" class="tiktok" style="color: #fff; text-decoration: none; padding: 10px 20px; background-color: #010101; border-radius: 8px;">
+      <i class="fab fa-tiktok"></i> TikTok
+    </a>
+    <a href="https://youtube.com/@goldenglobalentertainment?si=Q8pYypH6M4AcErDp" target="_blank" class="youtube" style="color: #fff; text-decoration: none; padding: 10px 20px; background-color: #FF0000; border-radius: 8px;">
+      <i class="fab fa-youtube"></i> YouTube
+    </a>
+    <a href="https://www.linkedin.com/in/golden-global-entertainment-golden-global-entertainment-676890365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="linkedin" style="color: #fff; text-decoration: none; padding: 10px 20px; background-color: #0A66C2; border-radius: 8px;">
+      <i class="fab fa-linkedin-in"></i> LinkedIn
+    </a>
+   <a href="https://whatsapp.com/channel/0029Vb6dI5XADTODijacy72i" 
+   target="_blank" 
+   class="whatsapp" 
+   style="color: #fff; text-decoration: none; padding: 10px 20px; background-color: #25D366; border-radius: 8px;">
+  <i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
+  </div>
+</section>
+
+   
+</section>
+<div style="text-align: center; margin: 20px 0; color: white;">
+  <hr style="border: 0; height: 2px; background: #FFD700; width: 60px; margin: auto;">
+</div>
+<footer style="background-color:#0e0e0e; padding:20px; text-align:center; color:#bbb; margin-top:40px; font-size:0.9rem;">
+  <p style="margin:5px 0; color:gold;">Golden Global © 2025</p>
+  <p style="margin:5px 0;">Todos los derechos reservados.</p>
+  <p style="margin:5px 0; font-size:0.8rem;">
+    Diseñado con <span style="color:red;">❤</span> por <strong style="color:gold;">Eyes_dea | Golden Global</strong>
+  </p>
+</footer>
+
+<!-- Script de partículas -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    // Partículas
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60 },
+        "color": { "value": "#FFD700" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.6 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#FFD700",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "grab": { "distance": 140, "line_linked": { "opacity": 0.8 } },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+
+    // Scroll automático al terminar intro
+    setTimeout(() => {
+      document.getElementById("intro").style.display = "none";
+      document.getElementById("inicio").scrollIntoView({ behavior: "smooth" });
+    }, 5000); // 5 segundos (3s animación + 2s fade out)
+  </script>
+  </body>
+</html>
