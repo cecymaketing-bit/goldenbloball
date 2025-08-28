@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Golden Global Entertainment</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+ <!--codigo de eyes_dea -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h2 {
+      color: gold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: gold;
+    }
+
+    .section {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .intro {
+      background: black;
+      color: gold;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeOut 2s ease 3s forwards;
+    }
+
+    .logo {
+      font-size: 3rem;
+      animation: popIn 1.5s ease-in-out;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    a {
+      color: gold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+    .proyecto {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 30px 0;
+  color: white;
+}
+
+.img-proyecto {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ffd70066;
+}
+
+.contenido-proyecto {
+  max-width: 600px;
+}
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.proyecto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #ffd70033;
+}
+
+.img-proyecto {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ffd70066;
+}
+
+.contenido-proyecto {
+  color: white;
+  max-width: 100%;
+}
+
+@keyframes aparecer {
+  0% { opacity: 0; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+
+@keyframes girar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#intro {
+  animation: desaparecerTodo 6s ease-in-out forwards;
+}
+
+@keyframes desaparecerTodo {
+  0%, 80% { opacity: 1; }
+  100% { opacity: 0; display: none; }
+}
+.caja-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  padding: 20px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+/* Opcional: centra el título dentro de la caja */
+.caja-texto h3 {
+  text-align: center;
+}
+
+/* Opcional: para que todas las cajas tengan el mismo alto */
+.caja-texto {
+  height: 100%;
+}
+.caja-texto {
+  padding: 20px;
+  background-color: #111;
+  border-radius: 12px;
+  color: #fff;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+  max-width: 320px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.caja-texto h3 {
+  color: #FFD700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.caja-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+</style>
+
+  </style>
+</head>
+<body>
+     <!-- Fondo animado -->
+  <div id="particles-js"></div>
+
+  <!-- Animación de entrada -->
+   <!-- Animación de entrada -->
+<div id="intro" style="position: relative; width: 100%; height: 100vh; background: black; overflow: hidden; display: flex; align-items: center; justify-content: center; flex-direction: column; z-index: 9999;">
+  
+  <!-- 🌍 Mundo dorado atrás -->
+  <img src="mundodorado.png" alt="Mundo dorado" style="position: absolute; width: 300px; opacity: 0.15; z-index: 1; animation: girar 10s linear infinite;">
+
+  <!-- 🔤 Texto "Golden Global" -->
+  <h1 style="font-size: 64px; color: #FFD700; z-index: 2; animation: aparecer 3s ease-in-out forwards;">Golden Global</h1>
+</div>
+
+  <div class="intro" id="intro">
+    <h1 class="logo">Golden Global</h1>
+  </div>
+
+  <!-- Encabezado y menú -->
+  <header>
+    <h2>Golden Global</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección Inicio -->
+  <section id="inicio" class="section">
+   <h1>Explora el mundo de Golden Global</h1>
+   <div style="text-align: center; margin-top: 30px;">
+  <img src="golden global .jpg" alt="Golden Global Logo" style="max-width: 200px;">
+</div>
+
+<p>
+Sumérgete en entrevistas exclusivas, historias que inspiran, y contenido que conecta con la nueva generación.  
+Golden Global no es solo un canal… es una experiencia que te hará ver el mundo con otros ojos.  
+¿Estás listo para descubrir lo que nadie más te cuenta?
+</p>
+<style>
+  .contenedor-cartas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Espacio entre filas */
+    margin-top: 40px;
+  }
+
+  .fila {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px; /* Espacio entre cartas en una fila */
+  }
+
+  .carta {
+    background-color: #111;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+
+  .carta:hover {
+    transform: scale(1.05);
+  }
+
+  .carta img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  .carta h3 {
+    margin: 10px 0 5px;
+    color: #FFD700;
+  }
+
+  .carta p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .section {
+  margin-top: 20px; /* o menos */
+}
+.tarjetas-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .tarjeta {
+    background-color: #111;
+    border-radius: 15px;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .tarjeta:hover {
+    transform: translateY(-5px);
+  }
+
+  .tarjeta img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  .tarjeta h3 {
+    font-size: 1.4rem;
+    color: #FFD700;
+    margin-bottom: 10px;
+  }
+
+  .tarjeta p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+</style>
+
+<div class="contenedor-cartas">
+
+  <!-- 🔹 Primera fila de cartas -->
+  <div class="fila">
+
+    <div class="carta">
+      <img src="SOY ROBOT.png" alt="Soy Robot">
+      <h3>Soy Robot</h3>
+      <p><strong>Conduce:</strong>  Leo
+ Estrada
+      <p>Soy Robot es un programa original de Golden Global Entertainment conducido por Leo
+ Estrada. A través de entrevistas con invitados del mundo tecnológico, científico,
+ psicológico y más, se abordan temas actuales, personales y llenos de controversia.
+ Con el apoyo en tiempo real de ChatGPT, se analizan datos, estadísticas y
+ curiosidades que te harán cuestionar la naturaleza humana, el futuro de la inteligencia
+ artificial y nuestra existencia en esta realidad. Un espacio donde el conocimiento y la
+ reflexión se fusionan.</p>
+    </div>
+
+    <div class="carta">
+      <img src="código abierto.png" alt="Código Abierto">
+      <h3>Código Abierto</h3>
+      <p><strong>Conduce:</strong> Karina Ramos</p>
+      <p> Código Abierto es un programa original de Golden Global Entertainment y conducido
+ por Karina Ramos, reconocida figura de los medios internacionales. Este espacio abre
+ una ventana estratégica al presente y futuro del ecosistema digital en México.
+ Cada episodio presenta entrevistas exclusivas con Chief Technology Officers (CTOs),
+ líderes de innovación y responsables de transformación tecnológica del sector público
+ y privado. Las conversaciones profundizan en los avances, retos y oportunidades que
+ definen el posicionamiento tecnológico de México a nivel global</p>
+    </div>
+
+    <div class="carta">
+      <img src="Linea empresarial.png" alt="Mentes Millonarias">
+      <h3>Línea Empresarial</h3>
+      <p><strong>Conduce:</strong>Leovigildo Chávez</p>
+      <p> Línea Empresarial es un programa original de Golden Global Entertainment, un
+ espacio de análisis donde convergen el ámbito empresarial, el gobierno, la cultura y
+ mucho más para abordar los grandes temas nacionales. Con la conducción de
+ Leovigildo Chávez, cada episodio ofrece conversaciones profundas y relevantes con
+ líderes, expertos y tomadores de decisiones que influyen en el rumbo de México y su
+ desarrollo.</p>
+    </div>
+
+    <div class="carta">
+      <img src="VOCES CON DEREK.png" alt="Nuevo Programa 3">
+      <h3>Voces</h3>
+      <p><strong>Conduce:</strong>Derek
+ Figueroa</p>
+      <p> Voces es un programa original de Golden Global Entertainment y conducido por Derek
+ Figueroa. Cada episodio presenta conversaciones con artistas, actores, productores,
+ chefs, cantantes, influencers, youtubers y más. A través de entrevistas profundas y
+ auténticas, se revelan las historias, trayectorias y perspectivas de quienes forman
+ parte del mundo del entretenimiento, la televisión, la música y la actuación. Un espacio
+ para descubrir lo que hay detrás de cada voz</p>
+    </div>
+  </div>
+
+  <!-- 🔻 Segunda fila de cartas -->
+  <div class="fila">
+
+    <div class="carta">
+      <img src="JOHNNY.png" alt="Nuevo Programa 1">
+      <h3> Me Late Johnny and Friends</h3>
+      <p><strong>Conduce:</strong> Johnny</p>
+      <p> Me Late Johnny and Friends es un programa original de Golden Global Entertainment,
+ un espacio vibrante y auténtico que reúne a grandes artistas, cantantes, actores y
+ figuras destacadas del medio artístico. A través de conversaciones exclusivas, llenas
+ de humor y cercanía, Johnny Mexicano crea un ambiente íntimo donde los invitados se
+ expresan con total libertad, compartiendo anécdotas inéditas, experiencias personales
+ y reflexiones sobre la industria del entretenimiento</p>
+    </div>
+
+    <div class="carta">
+      <img src="AMERICA CON LAS ESTRELLAS.png" alt="Nuevo Programa 2">
+      <h3>América con las Estrellas </h3>
+      <p><strong>Conduce:</strong> América Ramírez</p>
+      <p> América con las Estrellas es un programa original de Golden Global Entertainment y
+ conducido por la deslumbrante América Ramírez. Es el programa grupero por
+ excelencia dedicado a celebrar la música regional mexicana, sus raíces y las historias
+ que la han convertido en un símbolo de identidad y pasión.
+ América Ramírez nos lleva por las trayectorias, anécdotas y momentos más
+ memorables de sus invitados, creando un espacio lleno de emoción, orgullo y
+ auténtico sabor mexicano</p>
+    </div>
+
+    <div class="carta">
+      <img src="ENTRE LÍDERES Y RISAS.png" alt="Nuevo Programa 3">
+      <h3>Entre Líderes y Risas</h3>
+      <p><strong>Conduce:</strong>Gonzalo Espina Miranda</p>
+      <p> Entre Líderes y Risas es un programa original de Golden Global Entertainment y
+ conducido por Gonzalo Espina Miranda. En este espacio se abordan temas de
+ liderazgo a través de entrevistas con figuras influyentes de distintos sectores como el
+ empresarial, bursátil, político, artístico y deportivo. Con un estilo cercano y dinámico, el
+ programa combina preguntas formales con otras más relajadas —algunas enviadas
+ por el público— para mostrar el lado humano, auténtico y divertido de cada invitado</p>
+    </div>
+
+    <div class="carta">
+      <img src="DESPELUCANDO LA COTORRA PNG.png" alt="Nuevo Programa 3">
+      <h3> Despelucando a la Cotorra</h3>
+      <p><strong>Conduce:</strong> Jorge Narváez, Carlos del Valle y Antonio Sánchez</p>
+      <p> Despelucando a la Cotorra es un programa original de Golden Global Entertainment
+ conducido por Jorge Narváez, Carlos del Valle y Antonio Sánchez. Cada semana se
+ presentan las noticias más virales y relevantes con un toque de humor, crítica y
+ distintos puntos de vista. Política, entretenimiento, cultura, chismes y más… todo cabe
+ en este noticiero cotorro que informa y despeluca</p>
+    </div>
+  </div>
+</div>
+  </section>
+   <!-- Script de partículas -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    // Partículas
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60 },
+        "color": { "value": "#FFD700" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.6 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#FFD700",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "grab": { "distance": 140, "line_linked": { "opacity": 0.8 } },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+
+    // Scroll automático al terminar intro
+    setTimeout(() => {
+      document.getElementById("intro").style.display = "none";
+      document.getElementById("inicio").scrollIntoView({ behavior: "smooth" });
+    }, 5000); // 5 segundos (3s animación + 2s fade out)
+  </script>
+  <style>
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background: #0e0e0e;
+        color: white;
+    }
+    /* Carrusel */
+    .carousel {
+        position: relative;
+        overflow: hidden;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(75deg, #ffcc00, #ff6600);
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .carousel-slide {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    .carousel-slide.active {
+        opacity: 1;
+    }
+</style>
+</head>
+<body>
+
+<!-- Carrusel -->
+<div class="carousel">
+    <div class="carousel-slide active">🎬 Creando contenido que conecta</div>
+    <div class="carousel-slide">🌍 Entretenimiento para todo el mundo</div>
+    <div class="carousel-slide">🚀 Innovación audiovisual sin límites</div>
+</div>
+</section>
+
+<script>
+    // Carrusel
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }, 2500);
+</script>
+
+  </body>
+</html>
